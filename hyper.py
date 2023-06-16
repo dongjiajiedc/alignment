@@ -321,7 +321,7 @@ def get_colors(y, color_seed=1234):
     return [colors[k] for k in y]
 
 
-def get_Hyper_tree(data_path,start,end,lable,epoches,model_path=None,save_path='./',c=1):
+def get_Hyper_tree(data_path,start,end,lable,epoches,model_path=None,save_path='./',c=-1):
     np.random.seed(1234)
     torch.manual_seed(1234)
     # x, y_true, similarities = load_data('../../../cityu/HypHC/data/4_8/4_8.data',start,end,lable)

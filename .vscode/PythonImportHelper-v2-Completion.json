@@ -1402,7 +1402,7 @@
         "kind": 2,
         "importPath": "hyper",
         "description": "hyper",
-        "peekOfCode": "def get_Hyper_tree(data_path,start,end,lable,epoches,model_path=None,save_path='./',c=1):\n    np.random.seed(1234)\n    torch.manual_seed(1234)\n    # x, y_true, similarities = load_data('../../../cityu/HypHC/data/4_8/4_8.data',start,end,lable)\n    x, y_true, similarities = load_data(data_path,start,end,lable)\n    print(\"{} length:{}\".format(data_path,len(y_true)));\n    dataset = HCDataset(x, y_true, similarities, num_samples=50000)\n    dataloader = data.DataLoader(dataset, batch_size=32, shuffle=True, num_workers=8, pin_memory=True)\n    if(model_path ==None):\n        model = HypHC(dataset.n_nodes, 2, 5e-2, 5e-2 ,0.999)",
+        "peekOfCode": "def get_Hyper_tree(data_path,start,end,lable,epoches,model_path=None,save_path='./',c=-1):\n    np.random.seed(1234)\n    torch.manual_seed(1234)\n    # x, y_true, similarities = load_data('../../../cityu/HypHC/data/4_8/4_8.data',start,end,lable)\n    x, y_true, similarities = load_data(data_path,start,end,lable)\n    print(\"{} length:{}\".format(data_path,len(y_true)));\n    dataset = HCDataset(x, y_true, similarities, num_samples=50000)\n    dataloader = data.DataLoader(dataset, batch_size=32, shuffle=True, num_workers=8, pin_memory=True)\n    if(model_path ==None):\n        model = HypHC(dataset.n_nodes, 2, 5e-2, 5e-2 ,0.999)",
         "detail": "hyper",
         "documentation": {}
     },
